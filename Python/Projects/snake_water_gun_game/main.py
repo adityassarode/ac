@@ -41,14 +41,13 @@ You: Water | Computer: Water → Draw
 
 
 """)
-stop = True
-while(stop):
+
+while True:
 
     computer = random.choice(words)
-    user = input("Choose ('Snake','Water','gun')  or Enter 'Stop' to stop the game: ").lower()
+    user = input("Choose ('Snake','Water','gun')  or Enter 'Stop' to stop the game: ").strip().lower()
     if user == "stop":
         print("Thanks for playing")
-        stop = False
         break
     if user not in words:
         print("invalid choice, pls choose ('snake','water','Gun')")
