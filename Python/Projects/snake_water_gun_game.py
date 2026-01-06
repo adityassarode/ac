@@ -1,9 +1,8 @@
 import random
 
-def game():
-    words = ["snake","water","gun"]
-    computer = random.choice(words)
-    print("""
+words = ["snake","water","gun"]
+computer = random.choice(words)
+print("""
 
 
 === 🐍 Snake – 💧 Water – 🔫 Gun : Game Rules ===
@@ -41,18 +40,18 @@ You: Water | Computer: Water → Draw
 === Choose wisely and enjoy the game! ===
 
 
-    """)
-    stop = True
-    while(stop):
-        user = input("Choose ('Snake','Water','gun')  or Enter 'Stop' to stop the game: ").lower()
-        if user == "stop":
-            stop = False
-        elif computer == user:
-            print(f"You = {user} and Computer = {computer}")   
-            print("Its a draw")
-        elif (computer == "snake" and user == "water") or (computer == "water" and user == "gun") or (computer == "gun" and user == "snake"):
-            print(f"You = {user} and Computer = {computer}")   
-            print("Computer won")
-        else:
-            print(f"You = {user} and Computer = {computer}")  
-            print("You won")
+""")
+stop = True
+while(stop):
+    user = input("Choose ('Snake','Water','gun')  or Enter 'Stop' to stop the game: ").lower()
+    if user == "stop":
+        stop = False
+    elif computer == user:
+        print(f"You = {user} and Computer = {computer}")   
+        print("Its a draw")
+    elif (computer == "snake" and user == "water") or (computer == "water" and user == "gun") or (computer == "gun" and user == "snake"):
+        print(f"You = {user} and Computer = {computer}")   
+        print("Computer won")
+    else:
+        print(f"You = {user} and Computer = {computer}")  
+        print("You won")
