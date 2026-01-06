@@ -1,7 +1,7 @@
 import random
 
 words = ["snake","water","gun"]
-computer = random.choice(words)
+
 print("""
 
 
@@ -43,10 +43,17 @@ You: Water | Computer: Water → Draw
 """)
 stop = True
 while(stop):
+
+    computer = random.choice(words)
     user = input("Choose ('Snake','Water','gun')  or Enter 'Stop' to stop the game: ").lower()
     if user == "stop":
+        print("Thanks for playing")
         stop = False
-    elif computer == user:
+        break
+    if user not in words:
+        print("invalid choice, pls choose ('snake','water','Gun')")
+        continue
+    if computer == user:
         print(f"You = {user} and Computer = {computer}")   
         print("Its a draw")
     elif (computer == "snake" and user == "water") or (computer == "water" and user == "gun") or (computer == "gun" and user == "snake"):
