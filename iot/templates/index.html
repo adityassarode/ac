@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Automation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+</head>
+
+<body class="bg-dark text-light">
+
+<div class="container py-5">
+  <h1 class="text-center mb-4">🏠 Home Automation</h1>
+
+  <div class="row text-center">
+
+    <!-- Fan -->
+    <div class="col-md-4 mb-4">
+      <div class="card bg-secondary text-white">
+        <div class="card-body">
+          <h3>Fan</h3>
+          <p class="fs-4">Status: {{ devices[0] }}</p>
+          <a href="/device/fan/ON" class="btn btn-success">ON</a>
+          <a href="/device/fan/OFF" class="btn btn-danger">OFF</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Light -->
+    <div class="col-md-4 mb-4">
+      <div class="card bg-secondary text-white">
+        <div class="card-body">
+          <h3>Light</h3>
+          <p class="fs-4">Status: {{ devices[1] }}</p>
+          <a href="/device/light/ON" class="btn btn-success">ON</a>
+          <a href="/device/light/OFF" class="btn btn-danger">OFF</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Door -->
+    <div class="col-md-4 mb-4">
+      <div class="card bg-secondary text-white">
+        <div class="card-body">
+          <h3>Door</h3>
+          <p class="fs-4">Status: {{ devices[2] }}</p>
+          <a href="/device/door/OPEN" class="btn btn-success">OPEN</a>
+          <a href="/device/door/CLOSED" class="btn btn-danger">CLOSE</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
